@@ -1,0 +1,161 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <style>
+        .panel-footer{
+            background:#fff;
+        }
+        .btn{
+            border-radius: 1px;
+        }
+        .btn-sm, .btn-group-sm > .btn{
+            border-radius: 1px;
+        }
+        .input-sm, .form-horizontal .form-group-sm .form-control{
+            border-radius: 1px;
+        }
+
+        .panel-info {
+            border-color: #999;
+        }
+
+        .panel-heading {
+            border-top-left-radius: 1px;
+            border-top-right-radius: 1px;
+        }
+        .panel {
+            border-radius: 1px;
+        }
+        .panel-info > .panel-heading {
+            color: #eee;
+            border-color: #999;
+        }
+        .panel-info > .panel-heading {
+            background-image: linear-gradient(to bottom, #555 0px, #888 100%);
+        }
+
+        hr {
+            border-color: #999 -moz-use-text-color -moz-use-text-color;
+        }
+
+        .panel-footer {
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+            border-top: 1px solid #999;
+        }
+
+        .btn-link {
+            color: #888;
+        }
+
+        hr{
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+    
+        <div class="row">
+            <div class="col-md-6 ">
+                
+                <div class="panel panel-info">
+                    <div class="panel-heading">Address</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <h4>Shipping Address</h4>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12"><strong>Country:</strong></div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="country" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12">
+                                    <strong>First Name:</strong>
+                                    <input type="text" name="first_name" class="form-control" value="" />
+                                </div>
+                                <div class="span1"></div>
+                                <div class="col-md-6 col-xs-12">
+                                    <strong>Last Name:</strong>
+                                    <input type="text" name="last_name" class="form-control" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12"><strong>Address:</strong></div>
+                            <div class="col-md-12">
+                                <input type="text" name="address" class="form-control" value="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <p class=""><strong>City:</strong></p>
+                                <div class="col-md-6">
+                                    <input type="text" name="city" class="form-control" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class=""><strong>State:</strong></p>
+                                <div class="col-md-6">
+                                    <input type="text" name="state" class="form-control" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12"><strong>Zip / Postal Code:</strong></div>
+                            <div class="col-md-12">
+                                <input type="text" name="zip_code" class="form-control" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12"><strong>Phone Number:</strong></div>
+                            <div class="col-md-12"><input type="text" name="phone_number" class="form-control" value="" /></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12"><strong>Email Address:</strong></div>
+                            <div class="col-md-12"><input type="text" name="email_address" class="form-control" value="" /></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ">
+                <div class="card">
+                    <img  src="http://via.placeholder.com/640x360" alt="Image 1">
+                    <div class="card-body">
+                        <h6><strong>Product</strong></h6>
+                        <hr>
+
+                        <button class="btn btn-outline-secondary add-btn" >Add to cart</button>
+                        <a class="btn btn-outline-success" href="#">View </a>
+                        <h4 style="display: inline-block; float: right ">$20</h4>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 ">
+                <div class="card">
+                    <img  src="http://via.placeholder.com/640x360" alt="Image 1">
+                    <div class="card-body">
+                        <h6><strong>Product</strong></h6>
+                        <hr>
+                        
+                        <button class="btn btn-outline-secondary add-btn" >Add to cart</button>
+                        <a class="btn btn-outline-success" href="#">View </a>
+                        <h4 style="display: inline-block; float: right ">$20</h4>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+        .cart-row{
+            display: flex;
+            align-items: flex-stretch;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ececec;
+
+        }
+
+        .quantity{
+            display: inline-block;
+            font-weight: 700;
+            padding-right:10px;
+            
+
+        }
+
+        .chg-quantity{
+            width: 12px;
+            cursor: pointer;
+            display: block;
+            /* margin-top:1px; */
+            transition:.1s;
+        }
+
+        .chg-quantity:hover{
+            opacity: .6;
+        }
+
+
+        .hidden{
+            display: none!important;
+        }
+        /* .row-image{
+            width: 100px;
+        } */
+    </style>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-body">
+                <div class="btn">
+                    <a class="btn btn-outline-dark" style="float: left;" href="{% url 'store' %}"><i class="fa-solid fa-arrow-left-long"></i> Continue Shopping</a>
+                </div>
+                
+                <br>
+                <br>
+
+                <table class="table">
+                    <tr>
+                        <th>Items: <strong>3</strong></th>
+                        <th>Price: <strong>$20</strong></th>
+                        <th><a class="btn btn-success" style="float: right; " href="{% url 'checkout' %}">checkout</a></th>
+                    </tr>
+                </table>
+                
+            </div>
+            <div class="card card-body mt-5">
+                <table class="table">
+                    <thead>
+                        <th scope="col"></th>
+                        <th scope="col"><strong>Item</strong></th>
+                        <th scope="col"><strong>Price</strong></th>
+                        <th scope="col"><strong>Quantity</strong></th>
+                        <th scope="col"><strong>Total</strong></th>
+                    </thead>
+                    
+                    <tbody>
+                        
+                        <td><img class="row-image " src="/media/def.png" width="100px"></td>
+                        <div class="oth" style="padding-top: 5px;">
+                            <td><p>Product 1</p></td>
+                            <td><p>$20</p></td>
+                            <td>
+                                <p class="quantity">2</p>
+                                <div class="quantity">
+                                    <img class="chg-quantity mb-1" src="/media/up.png">
+                                    
+                                    <img class="chg-quantity" src="/media/down.png">
+                                </div>
+                            </td>
+                            <td ><p>$32</p></td>
+                        </div>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
